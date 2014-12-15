@@ -1,0 +1,187 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="styles/jquery-ui.min.css">
+        
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+        <!-- build:js scripts/vendor/modernizr.js -->
+        <script src="bower_components/modernizr/modernizr.js"></script>
+        <!-- endbuild -->
+    </head>
+    <body class="scrollspy-tgt">
+        <!--[if lt IE 10]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        railtrack<span class="tag-beta">BETA</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#f">Find Trains</a>
+                </li>
+                <li>
+                    <a href="#p">Check PNR Status</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <div id="page-content-wrapper">
+            <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars icon-menu-toggle"></i></a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="view view-find-trains">
+                            <h1>Search trains<br /><small>Subtext for header</small></h1>
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    
+                                    <div class="row">
+                                        <div class="form-group col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                            <label for="srcStationInput">From</label>
+                                            <input type="text" class="form-control" id="srcStationInput" placeholder="Any Indian railway station">
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-center flip">
+                                            <i class="fa fa-arrows-h"></i>
+                                        </div>
+                                        <div class="form-group col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                                            <label for="destStationInput">To</label>
+                                            <input type="text" class="form-control" id="destStationInput" placeholder="Any Indian railway station">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                            <div class="form-group has-feedback dep-date-form">
+                                                <label for="depDateInput">Leaving on</label>
+                                                <input type="text" class="form-control" id="depDateInput" placeholder="Pick a date">
+                                                <i class="fa fa-calendar form-control-feedback"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                            <label for="classSelect">Class of travel</label>
+                                            <select class="form-control" id="classSelect">
+                                                <option>Any</option>
+                                                <option>First AC (1A)</option>
+                                                <option>Second AC (2A)</option>
+                                                <option>Third AC (3A)</option>
+                                                <option>Chair Car (CC)</option>
+                                                <option>Sleeper (SL)</option>
+                                                <option>2nd Sitting (2S)</option>
+                                                <option>3-Tier Economy (3E)</option>
+                                                <option>General (GN)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <hr>
+                                    
+                                    <button type="button" class="btn btn-success">Search</button>   
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="view view-pnr-check">
+                            <h1>Check PNR Status<br/><small>Tana Ra Ra</small></h1>
+                            <div class="row">
+                                <div class="panel panel-default col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                    <div class="panel-body pnr-form-placeholder">
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="view view-pnr-response col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="panel pnr-response-placeholder">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="view view-train-info">
+                            <div class="panel panel-default">
+                                <div class="panel-body train-info-placeholder">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="view view-station-info">
+                            <div class="panel panel-default">
+                                <div class="panel-body station-info-placeholder">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+
+        <!-- build:js scripts/vendor.js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/typeahead.js/dist/typeahead.jquery.min.js"></script>
+        <script src="bower_components/typeahead.js/dist/bloodhound.min.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/main.js -->
+        <script src="scripts/vendor/jquery-ui.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/templates.js"></script>
+        <script src="scripts/models/station.js"></script>
+        <script src="scripts/collections/station.js"></script>
+        <script src="scripts/views/station-form.js"></script>
+        <script src="scripts/routes/app-router.js"></script>
+        <script src="scripts/models/find-form.js"></script>
+        <script src="scripts/models/pnr-form.js"></script>
+        <script src="scripts/views/pnr-form.js"></script>
+        <script src="scripts/models/pnr-response.js"></script>
+        <script src="scripts/views/pnr-response.js"></script>
+        <script src="scripts/models/train.js"></script>
+        <script src="scripts/views/train.js"></script>
+        <script src="scripts/models/train-info.js"></script>
+        <script src="scripts/views/train-info.js"></script>
+        <script src="scripts/models/station-info.js"></script>
+        <script src="scripts/views/station-info.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

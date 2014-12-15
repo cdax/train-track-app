@@ -1,0 +1,739 @@
+body {
+    background: #FFFFFF;
+}
+
+.hero-unit {
+    margin: 0 auto 0 auto;
+    width: 300px;
+}
+
+h1, h2, h3
+h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+
+p, li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+input[type="text"], select#classSelect {
+    border-radius: 0px;
+}
+
+.view {
+    display: none;
+}
+
+/* Toggle Styles */
+
+.icon-menu-toggle {
+    font-size: 2em;
+}
+
+a#menu-toggle {
+    color: #9E9E9E;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+a#menu-toggle:hover {
+    color: #424242;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #212121;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+    font-weight: 700;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+i.pull-right {
+    margin-top: 1em;
+    margin-right: 1em;
+}
+
+.sidebar-brand .tag-beta {
+    /*line-heihgt: 2em;*/
+    vertical-align: top;
+    font-size: 50%;
+    font-weight: normal;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: 1px solid #00B0FF;
+    border-radius: 3px;
+    color: white;
+    background-color: #00B0FF;
+    margin: 3px;
+    position: relative;
+    top: 0; 
+}
+
+/* Typeahead styles */
+
+input.typeahead.tt-input, input.typeahead.tt-hint {
+    margin-bottom: 1em;
+    border-radius: 0px;
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0);
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    outline: none;
+    -webkit-box-shadow: none;
+    -mox-box-shadow: none;
+    box-shadow: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input.typeahead.tt-input:hover,
+input.typeahead.tt-input:active,
+input.typeahead.tt-input:focus,
+.has-error input.typeahead.tt-input,
+.has-success input.typeahead.tt-input,
+.has-error input.typeahead.tt-input:hover,
+.has-success input.typeahead.tt-input:hover,
+.has-error input.typeahead.tt-input:active,
+.has-success input.typeahead.tt-input:active,
+.has-error input.typeahead.tt-input:focus,
+.has-success input.typeahead.tt-input:focus {
+    border-left: 1px solid rgba(255, 255, 255, 0);
+    border-right: 1px solid rgba(255, 255, 255, 0);
+    border-top: 1px solid rgba(255, 255, 255, 0);
+    outline: none;
+    -webkit-box-shadow: none;
+    -mox-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.tt-dropdown-menu {
+    width: 100%;
+    border: 1px solid #BDBDBD;
+    padding: 2px;
+    
+    background-color: #FFFFFF;
+    
+    -moz-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+}
+
+.tt-suggestion {
+    line-height: 1.8em;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: left;
+}
+
+.tt-suggestion .badge {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    border-radius: 2px;
+}
+
+.tt-suggestion:hover {
+    background-color: #E0E0E0;
+    cursor: hand;
+    cursor: pointer;
+}
+
+/*Panel styles*/
+.panel {
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+/*Radio button styles*/
+.radio-inline, .form-group label {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.radio-inline {
+    margin-bottom: 1em;
+}
+
+.radio-inline>input[type="radio"] {
+  margin-top: 2px;
+  vertical-align: middle;
+}
+
+.flip {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    vertical-align: bottom;
+    padding: none;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.flip i {
+    color: white;
+    font-size: 1.5em;
+    border-radius: 100%;
+    border: 3px solid #9E9E9E;
+    background: #9E9E9E;
+}
+
+.flip i:hover {
+    background-color: black;
+    border-color: black;
+}
+
+.flip .fa-arrows-h:before {
+    content: '\f07e';
+    text-align: center;
+}
+
+.form-group.has-feedback .form-control-feedback {
+    line-height: 2.4em;
+    vertical-align: bottom;
+    color: #9E9E9E;
+}
+
+#depDateInput, #classSelect {
+    cursor: hand;
+    cursor: pointer;
+}
+
+.dep-date-form {
+    margin-top: 1em;
+}
+
+/*Datepicker styles*/
+.ui-datepicker {
+    background: none;
+    background-color: white;
+    border-radius: 0px;
+    border: 1px solid #EEEEEE;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+
+a.ui-datepicker-next.ui-corner-all,
+a.ui-datepicker-prev.ui-corner-all {
+}
+
+a.ui-datepicker-next.ui-corner-all:hover,
+a.ui-datepicker-prev.ui-corner-all:hover{
+    border: none;
+    background: #BDBDBD;
+    cursor: hand;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ui-datepicker-next-hover .ui-icon.ui-icon-circle-triangle-e,
+.ui-datepicker-prev-hover .ui-icon.ui-icon-circle-triangle-w {
+    background: none;
+    border: none;
+}
+
+.ui-datepicker-next .ui-icon.ui-icon-circle-triangle-e,
+.ui-datepicker-prev .ui-icon.ui-icon-circle-triangle-w {
+    background: none;
+    border: none;
+}
+
+.ui-datepicker-next:before {
+    color: black;
+    font-family: 'FontAwesome';
+    content: '\f0a9';
+    margin: 5px;
+    border: none;
+}
+
+.ui-datepicker-prev:before {
+    color: black;
+    font-family: 'FontAwesome';
+    content: '\f0a8';
+    margin: 5px;
+    border: none;
+}
+
+.ui-datepicker-header {
+    background: none;
+    border: none;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.ui-datepicker-calendar {
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.ui-datepicker-calendar th {
+    font-weight: normal;
+}
+
+.ui-datepicker-calendar td a {
+    font-weight: 400;
+}
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+    background: none;
+    border: none;
+    font-weight: normal;
+    background: #FAFAFA;
+    color: black;
+}
+
+.ui-state-default.ui-state-highlight {
+    font-weight: bold;
+}
+
+.ui-state-default.ui-state-active {
+    background: #9E9E9E;
+    color: white;
+}
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default:hover, 
+.ui-widget-header .ui-state-default:hover {
+    color: white;
+    background: #BDBDBD;
+}
+
+/*PNR Response Styles*/
+.view-pnr-response {
+    background: #B3E5FC;
+    border-left: 1px dotted #03A9F4;
+    border-right: 1px dotted #03A9F4;
+    border-top: 1px dashed #03A9F4;
+    border-bottom: 1px dashed #03A9F4;
+    
+    -moz-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    
+    padding: 0px;
+}
+
+.pnr-slip-header {
+    background-color: #03A9F4;
+    color: white;
+    padding: 0px;
+}
+
+.pnr-slip-body {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.panel.pnr-response-placeholder {
+    padding: 0px;
+    background: none;
+    border: none;
+    font-family: 'Inconsolata', monospace;
+}
+
+.pnr-response-placeholder table,
+.pnr-response-placeholder table thead,
+.pnr-response-placeholder table tbody, 
+.pnr-response-placeholder table thead th
+.pnr-response-placeholder table tbody tr,
+.pnr-response-placeholder table tbody tr td {
+    margin: 0px;
+    padding: 0px;
+}
+
+.pnr-response-placeholder hr {
+    border: 1px dashed #03A9F4;
+}
+
+/*Station Information view styles*/
+
+.view-station-info .panel {
+    border-radius: 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    
+}
+
+.view-station-info>.panel {
+    background-color: #ECEFF1;
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.view-station-info h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.view-station-info h2, 
+.view-station-info h3, 
+.view-station-info h4, 
+.view-station-info h5, 
+.view-station-info h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.station-info-header-stncode {
+    color: #455A64;
+    background: #CFD8DC;
+    border: 1px solid #CFD8DC;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Inconsolata', monospace;
+}
+
+.station-info-trains-header {
+    display: inline-block;
+}
+
+.station-info-trains-title,
+.station-info-trains-filter {
+    display: inline;
+}
+
+.station-info-trains-filter {
+    margin: 10px;
+    width: 150px;
+}
+
+.view-station-info table {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.view-station-info table .thead {
+    color: white;
+    background-color: #78909C !important;
+}
+
+.station-info-train-name {
+
+}
+
+.station-info-train-number {
+    color: white;
+    background: #78909C;
+    border: 1px solid #78909C;
+    border-radius: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-right: 3px;
+}
+
+.station-info-delay {
+    font-size: 80%;
+    color: white;
+    background: #FF5252;
+    border: 1px solid #FF5252;
+    border-radius: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin-left: 3px;
+}
+
+.station-info-src-dest {
+    color: #BDBDBD;
+}
+
+.station-info-train-name a {
+    color: black;
+}
+
+.station-info-train-name a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/*Train Information view styles*/
+
+body {
+    background-color: #ECEFF1;
+    position: relative;
+}
+
+.train-info-header {
+    background: #ECEFF1;
+    margin: 0px;
+}
+
+.train-info-header-links>li>a:hover {
+    background: #607D8B;
+    color: #FFFFFF;
+}
+
+.view-train-info .panel {
+    border-radius: 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    box-shadow: rgba(0, 0, 0, 0.258824) 0px 2px 5px 0px;
+    
+}
+
+.view-train-info>.panel {
+    background-color: #ECEFF1;
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.view-train-info h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.view-train-info h2, 
+.view-train-info h3, 
+.view-train-info h4, 
+.view-train-info h5, 
+.view-train-info h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.train-info-header-trainno {
+    color: white;
+    background: #78909C;
+    border: 1px solid #78909C;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.train-info-coach {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    margin: 3px;
+    border: 1px solid #B0BEC5;
+    border-radius: 3px;
+}
+
+.train-info-station-code {
+    font-family: 'Inconsolata', monospace;
+    color: #455A64;
+    background: #CFD8DC;
+    border: 1px solid #CFD8DC;
+    border-radius: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.train-info-travel-time {
+    font-size: 80%;
+    color: #90A4AE;
+}
+
+/*tr:nth-child(even).train-info-stn-stop:hover {
+    color: white;
+    background-color: #03A9F4;
+}
+
+tr:nth-child(even).train-info-stn-stop:hover .train-info-station-code {
+    color: white;
+    background-color: #0288D1;
+    border-color: #0288D1;
+}
+
+tr:nth-child(even).train-info-stn-stop:active {
+    color: white;
+    background-color: #03A9F4;
+}
+
+tr:nth-child(even).train-info-stn-stop:active .train-info-station-code {
+    color: white;
+    background-color: #0288D1;
+    border-color: #0288D1;
+}
+
+tr:nth-child(odd).train-info-stn-stop:hover {
+    color: white;
+    background-color: #2196F3;
+}
+
+tr:nth-child(odd).train-info-stn-stop:hover .train-info-station-code {
+    color: white;
+    background-color: #1976D2;
+    border-color: #1976D2;
+}
+
+tr:nth-child(odd).train-info-stn-stop:active {
+    color: white;
+    background-color: #2196F3;
+}
+
+tr:nth-child(odd).train-info-stn-stop:active .train-info-station-code {
+    color: white;
+    background-color: #1976D2;
+    border-color: #1976D2;
+}
+
+.train-info-stn-stop:hover .train-info-stn-name a {
+    color: white;
+}*/
+
+.train-info-stn-name a {
+    color: black;
+}
+
+.train-info-stn-name a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.view-train-info table {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.view-train-info table .thead {
+    color: white;
+    background-color: #78909C !important;
+}
+
+.control-label {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.panel-body-w-border {
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+@media(max-width: 992px) {
+
+    .flip .fa-arrows-h:before {
+        content: '\f07d';
+    }
+    
+    .flip i {
+        width: 1.2em;
+    }
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+    .view-find-trains {
+        margin-right: 100px;
+    }
+}
+
